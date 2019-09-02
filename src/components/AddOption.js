@@ -8,14 +8,29 @@ import ReactDOM from "react-dom";
 // ******************************************************************
 
 export default class AddOption extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleAddOption = this.handleAddOption.bind(this);
-    this.state = {
-      error: undefined
-    };
-  }
-  handleAddOption(e) {
+  state = {
+    error: undefined
+  };
+
+  // ******** before Babel plugin Transform-Class-Properties *********
+
+  // constructor(props) {
+  //   super(props);
+  //   this.handleAddOption = this.handleAddOption.bind(this);
+  //   this.state = {
+  //     error: undefined
+  //   };
+  // }
+
+  // Transform-Class-Properties allow you to write methods inside of
+  // a ES6 class using fat arrow notation. And since arrow functions
+  // do not create their own this and use the value of the enclosing
+  // context instead, you no longer have to bind the this context to
+  // every method you define inside your component.
+
+  // ****************************************************************
+
+  handleAddOption = e => {
     e.preventDefault();
 
     const option = e.target.elements.option.value.trim();
@@ -26,7 +41,7 @@ export default class AddOption extends React.Component {
     if (!error) {
       e.target.elements.option.value = "";
     }
-  }
+  };
 
   render() {
     return (
@@ -34,7 +49,7 @@ export default class AddOption extends React.Component {
         {this.state.error && <p>{this.state.error}</p>}
         <form onSubmit={this.handleAddOption}>
           <input type="text" name="option" />
-          <button>Add Option</button>
+          <button className="button">Add Option</button>
         </form>
       </div>
     );

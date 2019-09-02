@@ -1,0 +1,21 @@
+.header {
+  background: $offBlack;
+  color: white;
+  margin-bottom: $xlSize;
+  padding: $mSize 0;
+
+}
+
+// BEM block__element__modifier (naming convention)
+.header__title {
+  h1 {
+    color: red;
+  }
+}
+
+.header__subtitle {
+  color: $offWhite;
+  font-size: $mSize;
+  font-weight: 500;
+  margin: 0;
+}

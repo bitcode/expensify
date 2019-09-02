@@ -1,0 +1,22 @@
+html {
+  // this font size is used for the purpose of 
+  // having a 16 pixel base, multiply that by
+  // .625 = 10 to work with r-e-m-s in a base 10
+  // system just like pixels, which means that for
+  // example 2.2rem will translate to 22 pixels
+  font-size: 62.5%;
+}
+
+body {
+  background: $darkBlue;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $mSize;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
