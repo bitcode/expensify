@@ -5,14 +5,19 @@
     color: white;
     font-weight: bold;
     font-size: $lSize;
-    margin-bottom: $xlSize;
+    margin-bottom: $mSize;
     padding: 2.4rem;
     width: 100%;
 }
 
 .big-button:disabled {
     opacity: .5;
+}
 
+@media (min-width: $desktop-breakpoint) {
+    .big-button {
+        margin-bottom: $xlSize;
+    }
 }
 
 .button {
@@ -20,7 +25,7 @@
     border: none;
     border-bottom: .3rem solid darken($purple, 10%);
     color: white;
-    font-weigth: 500;
+    font-weight: 500;
     padding: $sSize;
 }
 

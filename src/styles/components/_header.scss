@@ -8,9 +8,8 @@
 
 // BEM block__element__modifier (naming convention)
 .header__title {
-  h1 {
-    color: red;
-  }
+  font-size: $lSize;
+  margin: 0;
 }
 
 .header__subtitle {
@@ -18,4 +17,10 @@
   font-size: $mSize;
   font-weight: 500;
   margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .header {
+    margin-bottom: $xlSize;
+  }
 }
