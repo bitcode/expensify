@@ -1,3 +1,0 @@
-cd public && live-server --port=9001 --entry-file=index.html
-
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
